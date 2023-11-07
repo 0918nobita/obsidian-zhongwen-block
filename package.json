@@ -22,6 +22,8 @@
     },
     "dependencies": {
         "@vanilla-extract/css": "1.13.0",
-        "pinyin-pro": "3.17.0"
+        "pinyin-pro": "3.17.0",
+        "preact": "10.18.2",
+        "preact-render-to-string": "6.2.2"
     }
 }
