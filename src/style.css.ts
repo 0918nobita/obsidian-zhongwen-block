@@ -1,32 +1,38 @@
 import { style } from '@vanilla-extract/css';
 
-export const container = style({});
-
-export const sentence = style({
-    display: 'flex',
-    flexWrap: 'wrap',
-    columnGap: '0.2em',
+export const measureChineseCharWidth = style({
+    position: 'absolute',
+    visibility: 'hidden',
 });
 
-export const charBlock = style({
-    display: 'inline-flex',
-    flexDirection: 'column',
-    justifyContent: 'end',
+export const measurePinyinWidth = style({
+    position: 'absolute',
+    visibility: 'hidden',
+    fontSize: '0.8rem',
 });
 
-export const pinyin = style({
-    fontSize: '0.8em',
-    textAlign: 'center',
+export const container = style({
+    position: 'relative',
+});
+
+export const chineseCharLine = style({
+    position: 'relative',
+    overflowWrap: 'anywhere',
+    lineHeight: '2rem',
+});
+
+export const pinyinLine = style({
+    position: 'absolute',
+    overflowWrap: 'anywhere',
+    lineHeight: '2rem',
+    marginTop: '-1.3rem',
     userSelect: 'none',
-    transition: 'opacity .3s ease',
+    fontSize: '0.8rem',
     opacity: '0',
+    transition: 'opacity .3s ease',
     selectors: {
-        [`${container}:hover &`]: {
+        [`${container}:has(> ${chineseCharLine}:hover) > &`]: {
             opacity: '1',
         },
     },
-});
-
-export const chineseChar = style({
-    textAlign: 'center',
 });

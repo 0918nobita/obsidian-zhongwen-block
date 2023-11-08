@@ -7,6 +7,7 @@ export default defineConfig({
             entry: 'src/main.tsx',
             formats: ['cjs'],
         },
+        emptyOutDir: false,
         rollupOptions: {
             output: {
                 entryFileNames: '[name].js',
