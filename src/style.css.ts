@@ -18,13 +18,13 @@ export const container = style({
 export const chineseCharLine = style({
     position: 'relative',
     overflowWrap: 'anywhere',
-    lineHeight: '2rem',
+    lineHeight: '2.7rem',
 });
 
 export const pinyinLine = style({
     position: 'absolute',
     overflowWrap: 'anywhere',
-    lineHeight: '2rem',
+    lineHeight: '2.7rem',
     marginTop: '-1.3rem',
     userSelect: 'none',
     fontSize: '0.8rem',
