@@ -76,6 +76,7 @@ output.innerHTML = render(
         </div>
         <div
             style={{
+                position: 'relative',
                 overflowWrap: 'anywhere',
                 lineHeight: '3em',
             }}
