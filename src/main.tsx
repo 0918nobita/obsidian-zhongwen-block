@@ -2,18 +2,6 @@ import { Plugin } from 'obsidian';
 import { pinyin } from 'pinyin-pro';
 
 import * as styles from './style.css';
-import { render } from 'preact-render-to-string';
-
-type CharBlock = Readonly<{
-    chineseChar: Readonly<{
-        text: string;
-        horizontalPadding: number;
-    }>;
-    pinyin: Readonly<{
-        text: string;
-        horizontalPadding: number;
-    }>;
-}>;
 
 const gap = 2;
 
@@ -21,98 +9,51 @@ const codeBlockProcessor = async (
     source: string,
     element: HTMLElement,
 ): Promise<void> => {
-    const allData = pinyin(source, { type: 'all' });
-
-    const charBlocks: CharBlock[] = [];
+    const pinyinData = pinyin(source, { type: 'all' });
 
     await new Promise((resolve) => {
         setTimeout(resolve, 0);
     });
 
-    const measureChineseCharWidth = document.createElement('span');
-    measureChineseCharWidth.className = styles.measureChineseCharWidth;
-    element.appendChild(measureChineseCharWidth);
+    const container = element.createDiv();
+    container.className = styles.container;
 
-    const measurePinyinWidth = document.createElement('span');
-    measurePinyinWidth.className = styles.measurePinyinWidth;
-    element.appendChild(measurePinyinWidth);
+    const pinyinLine = container.createDiv();
+    pinyinLine.className = styles.pinyinLine;
 
-    for (const data of allData) {
-        measureChineseCharWidth.textContent = data.origin;
-        const chineseCharWidth =
-            measureChineseCharWidth.getBoundingClientRect().width;
+    const chineseCharLine = container.createDiv();
+    chineseCharLine.className = styles.chineseCharLine;
 
-        measurePinyinWidth.textContent = data.pinyin;
-        const pinyinWidth = measurePinyinWidth.getBoundingClientRect().width;
+    for (const pinyinDatum of pinyinData) {
+        const pinyinSpan = pinyinLine.createSpan();
+        pinyinSpan.textContent = pinyinDatum.pinyin;
+        const pinyinWidth = pinyinSpan.getBoundingClientRect().width;
 
-        const charBlock: CharBlock =
+        const chineseCharSpan = chineseCharLine.createSpan();
+        chineseCharSpan.textContent = pinyinDatum.origin;
+        const chineseCharWidth = chineseCharSpan.getBoundingClientRect().width;
+
+        const { pinyinPadding, chineseCharPadding } =
             pinyinWidth >= chineseCharWidth
                 ? ({
-                      chineseChar: {
-                          text: data.origin,
-                          horizontalPadding:
-                              (pinyinWidth - chineseCharWidth) / 2 + gap,
-                      },
-                      pinyin: {
-                          text: data.pinyin,
-                          horizontalPadding: gap,
-                      },
+                      pinyinPadding: `${gap}px`,
+                      chineseCharPadding: `${
+                          (pinyinWidth - chineseCharWidth) / 2 + gap
+                      }px`,
                   } as const)
                 : ({
-                      chineseChar: {
-                          text: data.origin,
-                          horizontalPadding: gap,
-                      },
-                      pinyin: {
-                          text: data.pinyin,
-                          horizontalPadding:
-                              (chineseCharWidth - pinyinWidth) / 2 + gap,
-                      },
+                      pinyinPadding: `${
+                          (chineseCharWidth - pinyinWidth) / 2 + gap
+                      }px`,
+                      chineseCharPadding: `${gap}px`,
                   } as const);
 
-        charBlocks.push(charBlock);
+        pinyinSpan.style.paddingLeft = pinyinPadding;
+        pinyinSpan.style.paddingRight = pinyinPadding;
+
+        chineseCharSpan.style.paddingLeft = chineseCharPadding;
+        chineseCharSpan.style.paddingRight = chineseCharPadding;
     }
-
-    const pinyinLine = (
-        <div className={styles.pinyinLine}>
-            {charBlocks.map(({ pinyin }) => (
-                <span
-                    style={{
-                        display: 'inline-block',
-                        paddingLeft: `${pinyin.horizontalPadding}px`,
-                        paddingRight: `${pinyin.horizontalPadding}px`,
-                    }}
-                >
-                    {pinyin.text}
-                </span>
-            ))}
-        </div>
-    );
-
-    const chineseCharLine = (
-        <div className={styles.chineseCharLine}>
-            {charBlocks.map(({ chineseChar }) => (
-                <span
-                    style={{
-                        display: 'inline-block',
-                        paddingLeft: `${chineseChar.horizontalPadding}px`,
-                        paddingRight: `${chineseChar.horizontalPadding}px`,
-                    }}
-                >
-                    {chineseChar.text}
-                </span>
-            ))}
-        </div>
-    );
-
-    const el = (
-        <div className={styles.container}>
-            {pinyinLine}
-            {chineseCharLine}
-        </div>
-    );
-
-    element.innerHTML = render(el);
 };
 
 export default class MyPlugin extends Plugin {

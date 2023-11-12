@@ -1,16 +1,5 @@
 import { style } from '@vanilla-extract/css';
 
-export const measureChineseCharWidth = style({
-    position: 'absolute',
-    visibility: 'hidden',
-});
-
-export const measurePinyinWidth = style({
-    position: 'absolute',
-    visibility: 'hidden',
-    fontSize: '0.8rem',
-});
-
 export const container = style({
     position: 'relative',
 });
