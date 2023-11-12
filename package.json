@@ -1,7 +1,7 @@
 {
     "private": "true",
     "name": "@0918nobita/obsidian-zhongwen-block",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "description": "An Obsidian plugin which provides code blocks with features for Chinese learners",
     "scripts": {
         "build": "vite build",
