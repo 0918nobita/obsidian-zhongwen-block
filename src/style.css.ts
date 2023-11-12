@@ -10,6 +10,14 @@ export const chineseCharLine = style({
     lineHeight: '2.7rem',
 });
 
+export const chineseCharSpan = style({
+    display: 'inline-block',
+});
+
+export const pinyinSpan = style({
+    display: 'inline-block',
+});
+
 export const pinyinLine = style({
     position: 'absolute',
     overflowWrap: 'anywhere',

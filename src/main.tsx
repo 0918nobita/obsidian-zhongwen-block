@@ -28,11 +28,15 @@ const codeBlockProcessor = async (
     });
 
     for (const pinyinDatum of pinyinData) {
-        const pinyinSpan = pinyinLine.createSpan({ text: pinyinDatum.pinyin });
+        const pinyinSpan = pinyinLine.createSpan({
+            text: pinyinDatum.pinyin,
+            cls: styles.pinyinSpan,
+        });
         const pinyinWidth = pinyinSpan.getBoundingClientRect().width;
 
         const chineseCharSpan = chineseCharLine.createSpan({
             text: pinyinDatum.origin,
+            cls: styles.chineseCharSpan,
         });
         const chineseCharWidth = chineseCharSpan.getBoundingClientRect().width;
 
