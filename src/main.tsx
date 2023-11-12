@@ -15,22 +15,25 @@ const codeBlockProcessor = async (
         setTimeout(resolve, 0);
     });
 
-    const container = element.createDiv();
-    container.className = styles.container;
+    const container = element.createDiv({
+        cls: styles.container,
+    });
 
-    const pinyinLine = container.createDiv();
-    pinyinLine.className = styles.pinyinLine;
+    const pinyinLine = container.createDiv({
+        cls: styles.pinyinLine,
+    });
 
-    const chineseCharLine = container.createDiv();
-    chineseCharLine.className = styles.chineseCharLine;
+    const chineseCharLine = container.createDiv({
+        cls: styles.chineseCharLine,
+    });
 
     for (const pinyinDatum of pinyinData) {
-        const pinyinSpan = pinyinLine.createSpan();
-        pinyinSpan.textContent = pinyinDatum.pinyin;
+        const pinyinSpan = pinyinLine.createSpan({ text: pinyinDatum.pinyin });
         const pinyinWidth = pinyinSpan.getBoundingClientRect().width;
 
-        const chineseCharSpan = chineseCharLine.createSpan();
-        chineseCharSpan.textContent = pinyinDatum.origin;
+        const chineseCharSpan = chineseCharLine.createSpan({
+            text: pinyinDatum.origin,
+        });
         const chineseCharWidth = chineseCharSpan.getBoundingClientRect().width;
 
         const { pinyinPadding, chineseCharPadding } =
