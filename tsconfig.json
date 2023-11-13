@@ -8,8 +8,6 @@
         "esModuleInterop": true,
         "forceConsistentCasingInFileNames": true,
         "strict": true,
-        "skipLibCheck": true,
-        "jsx": "react-jsx",
-        "jsxImportSource": "preact"
+        "skipLibCheck": true
     }
 }
