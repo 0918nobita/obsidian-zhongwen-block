@@ -4,7 +4,7 @@ import { defineConfig } from 'vite';
 export default defineConfig({
     build: {
         lib: {
-            entry: 'src/main.tsx',
+            entry: 'src/main.ts',
             formats: ['cjs'],
         },
         emptyOutDir: false,
