@@ -15,7 +15,7 @@ const codeBlockProcessor = async (
     source: string,
     element: HTMLElement,
     settings: ZhongwenBlockPluginSettings,
-): Promise<void> => {
+) => {
     const gap = 2;
 
     const pinyinData = pinyin(source, { type: 'all' });
