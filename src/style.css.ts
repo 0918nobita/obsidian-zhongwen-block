@@ -2,6 +2,11 @@ import { style } from '@vanilla-extract/css';
 
 export const container = style({
     position: 'relative',
+    selectors: {
+        [`.cm-preview-code-block &`]: {
+            marginTop: '0.5rem',
+        },
+    },
 });
 
 export const chineseCharLine = style({
