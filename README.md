@@ -6,7 +6,7 @@ Each Chinese sentence in `zh-cn` code block will be annotated with corresponding
 
 In order to help you remember the pronunciation, each pinyin is displayed only while the Chinese sentence is hovered.
 
-https://github.com/0918nobita/obsidian-zhongwen-block/assets/8453302/acc0ab77-90dd-4057-bc42-df0abdab7365
+![Screen recording](images/screen-recording.gif)
 
 Editing view:
 
