@@ -14,6 +14,7 @@ Editing view:
 ```zh-cn
 他先去医院，再去学校。
 ```
+
 彼女はまず病院に行って、次に学校に行きます。
 ````
 
@@ -37,7 +38,7 @@ When `true`, each pinyin will be displayed from the beginning.
 
 ## Attribution
 
-- Zhongwen Block depends on [pinyin-pro](https://github.com/zh-lx/pinyin-pro) in order to convert Chinese into pinyin.
+-   Zhongwen Block depends on [pinyin-pro](https://github.com/zh-lx/pinyin-pro) in order to convert Chinese into pinyin.
 
 ## Development
 
