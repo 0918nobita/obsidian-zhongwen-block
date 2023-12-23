@@ -1,0 +1,22 @@
+name: Release obsidian plugin
+
+on:
+  push:
+    tags:
+      - '[0-9].[0-9]+.[0-9]+'
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16.15.0
+      - run: npm run ci
+      - run: npm run build
+      - uses: ncipollo/release-action@v1
+        with:
+          body: |
+            Please refer to [CHANGELOG.md](https://github.com/0918nobita/obsidian-zhongwen-block/blob/main/CHANGELOG.md) for details.
+          artifacts: 'dist/index.js,dist/styles.css,manifest.json'
