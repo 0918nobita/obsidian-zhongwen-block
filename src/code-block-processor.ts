@@ -4,18 +4,14 @@ import type { Settings } from './settings';
 
 import * as styles from './style.css';
 
-export const codeBlockProcessor = async (
+export const codeBlockProcessor = (
     source: string,
     element: HTMLElement,
     settings: Settings,
-) => {
+): void => {
     const gap = 2;
 
     const pinyinData = pinyin(source, { type: 'all' });
-
-    await new Promise((resolve) => {
-        setTimeout(resolve, 0);
-    });
 
     const container = element.createDiv({
         cls: styles.container,
