@@ -13,7 +13,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16.15.0
-      - run: npm run ci
+      - run: npm ci
       - run: npm run build
       - uses: ncipollo/release-action@v1
         with:
