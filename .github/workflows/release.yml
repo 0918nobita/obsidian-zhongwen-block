@@ -17,6 +17,7 @@ jobs:
       - run: npm run build
       - uses: ncipollo/release-action@v1
         with:
+          artifacts: 'dist/index.js,dist/styles.css,manifest.json'
           body: |
             Please refer to [CHANGELOG.md](https://github.com/0918nobita/obsidian-zhongwen-block/blob/main/CHANGELOG.md) for details.
-          artifacts: 'dist/index.js,dist/styles.css,manifest.json'
+          token: ${{ secrets.GH_RELEASE_TOKEN }}
