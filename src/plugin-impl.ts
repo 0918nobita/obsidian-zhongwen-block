@@ -33,7 +33,7 @@ export class PluginImpl extends Obsidian.Plugin implements Plugin {
             async (source, element) => {
                 await domReady();
 
-                codeBlockProcessor(source, element, this.settings);
+                await codeBlockProcessor(source, element, this.settings);
             },
         );
     }

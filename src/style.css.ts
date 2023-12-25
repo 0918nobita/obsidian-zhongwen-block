@@ -9,13 +9,13 @@ export const container = style({
     },
 });
 
-export const chineseCharLine = style({
+export const zhCharLine = style({
     position: 'relative',
     overflowWrap: 'anywhere',
     lineHeight: '2.7rem',
 });
 
-export const chineseCharSpan = style({
+export const zhCharSpan = style({
     display: 'inline-block',
 });
 
@@ -38,7 +38,7 @@ export const pinyinLineDisplayedOnHover = style([
         opacity: '0',
         transition: 'opacity .3s ease',
         selectors: {
-            [`${container}:has(> ${chineseCharLine}:hover) > &`]: {
+            [`${container}:has(> ${zhCharLine}:hover) > &`]: {
                 opacity: '1',
             },
         },
