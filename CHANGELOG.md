@@ -1,3 +1,9 @@
+## [0.3.3](https://github.com/0918nobita/obsidian-zhongwen-block/compare/0.3.2...0.3.3) (2023-12-25)
+
+### Bug Fixes
+
+-   Fix a bug that broke the layout of elements drawn off-screen by this plugin (PR: [#32](https://github.com/0918nobita/obsidian-zhongwen-block/pull/32))
+
 ## [0.3.2](https://github.com/0918nobita/obsidian-zhongwen-block/compare/0.3.1...0.3.2) (2023-12-23)
 
 ### Update dependencies
