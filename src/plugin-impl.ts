@@ -1,6 +1,6 @@
 import * as Obsidian from 'obsidian';
 
-import { codeBlockProcessor } from './code-block-processor';
+import { codeBlockProcessor, type LayoutMemo } from './code-block-processor';
 import type { Plugin } from './plugin';
 import { type Settings, defaultSettings } from './settings';
 import { SettingTabImpl } from './setting-tab-impl';
@@ -28,17 +28,24 @@ export class PluginImpl extends Obsidian.Plugin implements Plugin {
 
         this.addSettingTab(new SettingTabImpl(this.app, this));
 
+        const layoutMemo: LayoutMemo = new Map();
+
         this.registerMarkdownCodeBlockProcessor(
             'zh-cn',
             async (source, element) => {
                 await domReady();
 
-                await codeBlockProcessor(source, element, this.settings);
+                await codeBlockProcessor(
+                    source,
+                    element,
+                    this.settings,
+                    layoutMemo,
+                );
             },
         );
     }
 
-    async saveSettings(): Promise<void> {
+    async saveSettings() {
         await this.saveData(this.settings);
     }
 }
