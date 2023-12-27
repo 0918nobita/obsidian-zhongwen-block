@@ -1,3 +1,7 @@
+## [0.4.0](https://github.com/0918nobita/obsidian-zhongwen-block/compare/0.3.3...0.4.0) (2023-12-27)
+
+-   Improve the performance of this plugin's code block processor using memorization (PR: [#36](https://github.com/0918nobita/obsidian-zhongwen-block/pull/36))
+
 ## [0.3.3](https://github.com/0918nobita/obsidian-zhongwen-block/compare/0.3.2...0.3.3) (2023-12-25)
 
 ### Bug Fixes
