@@ -10,14 +10,8 @@
 
 | package                          | from    | to      |
 | -------------------------------- | ------- | ------- |
-| @types/node                      | 20.10.0 | 20.10.4 |
-| @typescript-eslint/eslint-plugin | 6.13.0  | 6.15.0  |
-| @typescript-eslint/parser        | 6.13.0  | 6.15.0  |
 | @vanilla-extract/vite-plugin     | 3.9.2   | 3.9.3   |
-| eslint                           | 8.54.0  | 8.56.0  |
-| globals                          | 13.23.0 | 13.24.0 |
 | pinyin-pro                       | 3.18.2  | 3.18.5  |
-| prettier                         | 3.1.0   | 3.1.1   |
 | typescript                       | 5.3.2   | 5.3.3   |
 | vite                             | 4.5.0   | 4.5.1   |
 
