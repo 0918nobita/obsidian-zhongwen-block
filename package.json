@@ -23,7 +23,8 @@
     },
     "dependencies": {
         "@vanilla-extract/css": "1.14.0",
-        "pinyin-pro": "3.18.5"
+        "pinyin-pro": "3.18.5",
+        "rxjs": "7.8.1"
     },
     "prettier": {
         "semi": true,
