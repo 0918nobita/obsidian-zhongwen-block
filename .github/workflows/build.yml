@@ -1,0 +1,22 @@
+name: Build
+
+on:
+  push:
+    paths:
+      - '.github/workflows/build.yml'
+      - 'src/**/*.ts'
+      - 'package.json'
+      - 'package-lock.json'
+      - 'tsconfig.json'
+      - 'vite.config.ts'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16.15.0
+      - run: npm ci
+      - run: npm run build
