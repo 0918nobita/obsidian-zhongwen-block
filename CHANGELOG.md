@@ -1,7 +1,7 @@
 ## [0.4.1](https://github.com/0918nobita/obsidian-zhongwen-block/compare/0.4.0...0.4.1) (2023-12-30)
 
-- Improve accessibiity of rendered content (PR: [#42](https://github.com/0918nobita/obsidian-zhongwen-block/pull/42))
-- Migrate this npm package to fully ESM (PR: [#44](https://github.com/0918nobita/obsidian-zhongwen-block/pull/44) and [#45](https://github.com/0918nobita/obsidian-zhongwen-block/pull/45))
+-   Improve accessibiity of rendered content (PR: [#42](https://github.com/0918nobita/obsidian-zhongwen-block/pull/42))
+-   Migrate this npm package to fully ESM (PR: [#44](https://github.com/0918nobita/obsidian-zhongwen-block/pull/44) and [#45](https://github.com/0918nobita/obsidian-zhongwen-block/pull/45))
 
 ### Update dependencies
 
