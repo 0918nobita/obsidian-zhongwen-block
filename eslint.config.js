@@ -1,10 +1,13 @@
-const globals = require('globals');
-const js = require('@eslint/js');
-const ts = require('@typescript-eslint/eslint-plugin');
-const tsParser = require('@typescript-eslint/parser');
+import { dirname } from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+import globals from 'globals';
+import js from '@eslint/js';
+import ts from '@typescript-eslint/eslint-plugin';
+import tsParser from '@typescript-eslint/parser';
 
 /** @type {import('eslint').Linter.FlatConfig} */
-module.exports = [
+export default [
     {
         ignores: ['dist'],
     },
@@ -13,7 +16,7 @@ module.exports = [
         languageOptions: {
             globals: {
                 ...globals.browser,
-                ...globals.node,
+                ...globals.nodeBuiltin,
             },
         },
     },
@@ -23,7 +26,7 @@ module.exports = [
             parser: tsParser,
             parserOptions: {
                 project: true,
-                tsconfigRootDir: __dirname,
+                tsconfigRootDir: dirname(fileURLToPath(import.meta.url)),
             },
         },
         plugins: {
