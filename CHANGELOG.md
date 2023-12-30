@@ -1,3 +1,14 @@
+## [0.4.1](https://github.com/0918nobita/obsidian-zhongwen-block/compare/0.4.0...0.4.1) (2023-12-30)
+
+- Improve accessibiity of rendered content (PR: [#42](https://github.com/0918nobita/obsidian-zhongwen-block/pull/42))
+- Migrate this npm package to fully ESM (PR: [#44](https://github.com/0918nobita/obsidian-zhongwen-block/pull/44) and [#45](https://github.com/0918nobita/obsidian-zhongwen-block/pull/45))
+
+### Update dependencies
+
+| package | from  | to     |
+| ------- | ----- | ------ |
+| vite    | 4.5.1 | 5.0.10 |
+
 ## [0.4.0](https://github.com/0918nobita/obsidian-zhongwen-block/compare/0.3.3...0.4.0) (2023-12-27)
 
 -   Improve the performance of this plugin's code block processor using memorization (PR: [#36](https://github.com/0918nobita/obsidian-zhongwen-block/pull/36))
