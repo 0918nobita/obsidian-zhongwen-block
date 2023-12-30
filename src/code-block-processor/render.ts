@@ -184,10 +184,16 @@ export const codeBlockProcessor = async (
 
     const container = element.createDiv({
         cls: styles.container,
+        attr: {
+            lang: 'zh-CN',
+        },
     });
 
     const pinyinLine = container.createDiv({
         cls: styles.pinyinLine,
+        attr: {
+            'aria-hidden': true,
+        },
     }) as PinyinLine;
 
     const zhCharLine = container.createDiv({
