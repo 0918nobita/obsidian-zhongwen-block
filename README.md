@@ -48,6 +48,8 @@ When `true`, each pinyin will be displayed from the beginning.
 $ npm run build
 ```
 
+`The CJS build of Vite's Node API is deprecated.` warning appears, but this is caused by `@vanilla-extract/vite-plugin` package and will be resolved when its new version is released soon.
+
 ### Lint
 
 ```bash
