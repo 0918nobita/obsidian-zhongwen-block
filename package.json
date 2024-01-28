@@ -23,7 +23,7 @@
         "vite": "5.0.12"
     },
     "dependencies": {
-        "@vanilla-extract/css": "1.14.0",
+        "@vanilla-extract/css": "1.14.1",
         "pinyin-pro": "3.19.3"
     },
     "prettier": {
