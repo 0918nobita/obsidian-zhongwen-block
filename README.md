@@ -1,5 +1,7 @@
 # Obsidian Zhongwen Block
 
+[![README-ja](https://img.shields.io/badge/lang-ja-blue)](https://github.com/0918nobita/obsidian-zhongwen-block/blob/main/README.ja.md)
+
 An Obsidian plugin which provides code blocks with features for Chinese learners
 
 Each Chinese sentence in `zh-cn` code block will be annotated with corresponding pinyin as ruby.
@@ -47,8 +49,6 @@ When `true`, each pinyin will be displayed from the beginning.
 ```bash
 $ npm run build
 ```
-
-`The CJS build of Vite's Node API is deprecated.` warning appears, but this is caused by `@vanilla-extract/vite-plugin` package and will be resolved when its new version is released soon.
 
 ### Lint
 
