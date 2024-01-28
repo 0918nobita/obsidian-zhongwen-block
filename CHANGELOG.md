@@ -1,3 +1,16 @@
+## [0.5.0](https://github.com/0918nobita/obsidian-zhongwen-block/compare/0.4.1...0.5.0) (2024-01-28)
+
+-   Refactor code block processor (PR: [#52](https://github.com/0918nobita/obsidian-zhongwen-block/pull/52))
+
+### Update dependencies
+
+| package                      | from   | to     |
+| ---------------------------- | ------ | ------ |
+| @vanilla-extract/css         | 1.14.0 | 1.14.1 |
+| @vanilla-extract/vite-plugin | 3.9.3  | 3.9.5  |
+| pinyin-pro                   | 3.18.5 | 3.19.3 |
+| vite                         | 5.0.10 | 5.0.12 |
+
 ## [0.4.1](https://github.com/0918nobita/obsidian-zhongwen-block/compare/0.4.0...0.4.1) (2023-12-30)
 
 -   Improve accessibiity of rendered content (PR: [#42](https://github.com/0918nobita/obsidian-zhongwen-block/pull/42))
