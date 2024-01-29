@@ -1,6 +1,7 @@
 # Obsidian Zhongwen Block
 
 [![README-ja](https://img.shields.io/badge/lang-ja-blue)](https://github.com/0918nobita/obsidian-zhongwen-block/blob/main/README.ja.md)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2F0918nobita%2Fobsidian-zhongwen-block.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2F0918nobita%2Fobsidian-zhongwen-block?ref=badge_shield)
 
 An Obsidian plugin which provides code blocks with features for Chinese learners
 
@@ -61,3 +62,7 @@ $ npm run lint
 ```bash
 $ npm run format
 ```
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2F0918nobita%2Fobsidian-zhongwen-block.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2F0918nobita%2Fobsidian-zhongwen-block?ref=badge_large)
