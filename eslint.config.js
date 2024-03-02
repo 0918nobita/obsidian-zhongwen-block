@@ -1,17 +1,15 @@
-import { dirname } from 'node:path';
-import { fileURLToPath } from 'node:url';
+// @ts-check
 
+import eslint from '@eslint/js';
 import globals from 'globals';
-import js from '@eslint/js';
-import ts from '@typescript-eslint/eslint-plugin';
-import tsParser from '@typescript-eslint/parser';
+import tseslint from 'typescript-eslint';
 
-/** @type {import('eslint').Linter.FlatConfig} */
+/** @type {import('typescript-eslint').Config} */
 export default [
     {
         ignores: ['dist'],
     },
-    js.configs.recommended,
+
     {
         languageOptions: {
             globals: {
@@ -20,21 +18,31 @@ export default [
             },
         },
     },
+
+    eslint.configs.recommended,
+
     {
         files: ['**/*.ts'],
         languageOptions: {
-            parser: tsParser,
             parserOptions: {
                 project: true,
-                tsconfigRootDir: dirname(fileURLToPath(import.meta.url)),
+                tsconfigRootDir: import.meta.dirname,
             },
         },
-        plugins: {
-            '@typescript-eslint': ts,
-        },
-        rules: {
-            ...ts.configs['strict-type-checked'].rules,
-            ...ts.configs['stylistic-type-checked'].rules,
-        },
     },
+
+    {
+        files: ['**/*.js'],
+        ...tseslint.configs.disableTypeChecked,
+    },
+
+    ...tseslint.configs.recommendedTypeChecked.map((config) => ({
+        ...config,
+        files: ['**/*.ts'],
+    })),
+
+    ...tseslint.configs.stylisticTypeChecked.map((config) => ({
+        ...config,
+        files: ['**/*.ts'],
+    })),
 ];
