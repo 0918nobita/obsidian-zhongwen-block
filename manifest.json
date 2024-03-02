@@ -1,7 +1,7 @@
 {
     "id": "zhongwen-block",
     "name": "Zhongwen Block",
-    "version": "0.5.0",
+    "version": "0.5.1",
     "minAppVersion": "0.15.0",
     "description": "Provides code blocks with features for Chinese learners",
     "author": "Kodai Matsumoto",

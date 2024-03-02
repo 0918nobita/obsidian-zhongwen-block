@@ -1,3 +1,14 @@
+## [0.5.1](https://github.com/0918nobita/obsidian-zhongwen-block/compare/0.5.0...0.5.1) (2024-03-02)
+
+-   Migrate `typescript-eslint` from v6 to v7 (flat config) (PR: [#69](https://github.com/0918nobita/obsidian-zhongwen-block/pull/69))
+
+### Update dependencies
+
+| package    | from   | to     |
+| ---------- | ------ | ------ |
+| pinyin-pro | 3.19.3 | 3.19.6 |
+| vite       | 5.0.12 | 5.1.4  |
+
 ## [0.5.0](https://github.com/0918nobita/obsidian-zhongwen-block/compare/0.4.1...0.5.0) (2024-01-28)
 
 -   Refactor code block processor (PR: [#52](https://github.com/0918nobita/obsidian-zhongwen-block/pull/52))
