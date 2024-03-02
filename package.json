@@ -15,7 +15,7 @@
         "@typescript-eslint/eslint-plugin": "6.19.1",
         "@typescript-eslint/parser": "6.19.1",
         "@vanilla-extract/vite-plugin": "4.0.4",
-        "eslint": "8.56.0",
+        "eslint": "8.57.0",
         "globals": "14.0.0",
         "obsidian": "1.4.11",
         "prettier": "3.2.5",
