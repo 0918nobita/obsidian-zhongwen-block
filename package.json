@@ -11,7 +11,7 @@
         "format:check": "prettier --check ."
     },
     "devDependencies": {
-        "@types/node": "20.11.19",
+        "@types/node": "20.11.24",
         "@typescript-eslint/eslint-plugin": "6.19.1",
         "@typescript-eslint/parser": "6.19.1",
         "@vanilla-extract/vite-plugin": "4.0.4",
