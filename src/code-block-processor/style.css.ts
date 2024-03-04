@@ -2,17 +2,18 @@ import { style } from '@vanilla-extract/css';
 
 export const container = style({
     position: 'relative',
-    selectors: {
-        [`.cm-preview-code-block &`]: {
-            marginTop: '0.5rem',
-        },
-    },
+    backgroundColor: '#22272E',
+    border: '1px solid #333a45',
+    borderRadius: '5px',
+    paddingTop: '0.8rem',
+    paddingLeft: '0.5rem',
 });
 
 export const pinyinLine = style({
     position: 'absolute',
-    top: '0',
-    left: '0',
+    top: '0.8rem',
+    left: '0.5rem',
+    width: 'calc(100% - 0.5rem * 2)',
     lineHeight: '2.7rem',
     zIndex: '0',
 });
