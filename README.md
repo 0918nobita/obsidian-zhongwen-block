@@ -32,6 +32,12 @@ Reading view:
 
 ## Settings
 
+### Language
+
+Default: English
+
+This plugin supports English and Japanese.
+
 ### Always show pinyin
 
 Default: `false`
