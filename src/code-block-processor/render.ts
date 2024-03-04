@@ -14,7 +14,11 @@ export const codeBlockProcessor = async (
         ? 'alwaysDisplay'
         : 'displayOnHover';
 
-    const container = new Container(element);
+    const container = new Container({
+        parent: element,
+        source,
+        googleApiKey: settings.googleApiKey,
+    });
 
     const segments = splitSentenceIntoSegments(source.trim());
 

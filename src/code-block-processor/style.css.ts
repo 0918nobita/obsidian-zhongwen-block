@@ -61,3 +61,22 @@ export const zhCharLine = style({
 export const visibleZhBlock = style({
     display: 'inline-block',
 });
+
+export const playButton = style({
+    position: 'absolute',
+    top: '0',
+    right: '0',
+    zIndex: '2',
+    opacity: '0',
+    transition: 'opacity .3s ease',
+    selectors: {
+        [`${container}:has(*:hover) &`]: {
+            opacity: 1,
+        },
+    },
+});
+
+export const playButtonIcon = style({
+    width: '1rem',
+    fill: '#DDD',
+});

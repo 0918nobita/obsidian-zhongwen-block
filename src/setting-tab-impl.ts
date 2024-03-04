@@ -48,5 +48,14 @@ export class SettingTabImpl
                         await this.plugin.saveSettings();
                     }),
             );
+
+        new Obsidian.Setting(containerEl)
+            .setName(t(this.plugin.settings.lang, 'googleApiKeyInput'))
+            .addText((text) =>
+                text.onChange(async (value) => {
+                    this.plugin.settings.googleApiKey = value;
+                    await this.plugin.saveSettings();
+                }),
+            );
     }
 }

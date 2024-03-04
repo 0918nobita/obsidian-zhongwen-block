@@ -5,6 +5,10 @@ const translation = {
         'en-US': 'Always display pinyin',
         'ja-JP': 'ピンインを常に表示する',
     },
+    googleApiKeyInput: {
+        'en-US': 'Google Cloud Text-to-Speech API Key',
+        'ja-JP': 'Google Cloud Text-to-Speech API の API キー',
+    },
     language: {
         'en-US': 'Language',
         'ja-JP': '言語',

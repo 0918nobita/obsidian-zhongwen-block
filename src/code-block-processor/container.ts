@@ -1,3 +1,4 @@
+import { requestUrl } from 'obsidian';
 import * as PinyinPro from 'pinyin-pro';
 
 import { LayoutMemo, ZhCharBlockLayout } from './memo';
@@ -5,6 +6,7 @@ import { NonZhSegment, ZhSegment } from './split-sentence';
 import { PinyinLine } from './pinyin-line';
 import { PinyinSpanStyle } from './pinyin-span';
 import { ZhCharLine } from './zh-char-line';
+import { volumeHigh } from '../icon';
 
 import * as styles from './style.css';
 
@@ -31,7 +33,15 @@ export class Container {
     #pinyinLine: PinyinLine;
     #zhCharLine: ZhCharLine;
 
-    constructor(parent: HTMLElement) {
+    constructor({
+        parent,
+        source,
+        googleApiKey,
+    }: {
+        parent: HTMLElement;
+        source: string;
+        googleApiKey: string;
+    }) {
         const el = parent.createDiv({
             cls: styles.container,
             attr: { lang: 'zh-CN' },
@@ -40,6 +50,40 @@ export class Container {
         this.#pinyinLine = new PinyinLine(el);
 
         this.#zhCharLine = new ZhCharLine(el);
+
+        const playButton = el.createEl('button', {
+            cls: styles.playButton,
+        });
+
+        const playButtonIcon = volumeHigh();
+        playButtonIcon.classList.add(styles.playButtonIcon);
+        playButton.append(playButtonIcon);
+
+        playButton.addEventListener('click', () => {
+            void (async () => {
+                const res = await requestUrl({
+                    method: 'POST',
+                    url: `https://texttospeech.googleapis.com/v1beta1/text:synthesize?key=${googleApiKey}`,
+                    contentType: 'application/json; charset=utf-8',
+                    body: JSON.stringify({
+                        audioConfig: {
+                            audioEncoding: 'MP3',
+                        },
+                        input: {
+                            text: source,
+                        },
+                        voice: {
+                            languageCode: 'cmn-CN',
+                            name: 'cmn-CN-Wavenet-A',
+                        },
+                    }),
+                });
+                const { audioContent } = res.json as { audioContent: string };
+                const audioSrc = `data:audio/mp3;base64,${audioContent}`;
+                const audio = new Audio(audioSrc);
+                await audio.play();
+            })();
+        });
     }
 
     appendNonZhSegment({ nonZhChars }: NonZhSegment) {
