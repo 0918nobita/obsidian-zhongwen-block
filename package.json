@@ -11,6 +11,7 @@
         "format:check": "prettier --check ."
     },
     "devDependencies": {
+        "@fortawesome/free-solid-svg-icons": "6.5.1",
         "@types/node": "20.11.24",
         "@vanilla-extract/vite-plugin": "4.0.4",
         "eslint": "8.57.0",
