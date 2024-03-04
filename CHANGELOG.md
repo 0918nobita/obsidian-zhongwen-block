@@ -1,3 +1,9 @@
+## [0.6.0](https://github.com/0918nobita/obsidian-zhongwen-block/compare/0.5.1...0.6.0) (2024-03-04)
+
+### Features
+
+-   Support for Japanese in settings tab (PR: [#72](https://github.com/0918nobita/obsidian-zhongwen-block/pull/72))
+
 ## [0.5.1](https://github.com/0918nobita/obsidian-zhongwen-block/compare/0.5.0...0.5.1) (2024-03-02)
 
 -   Migrate `typescript-eslint` from v6 to v7 (flat config) (PR: [#69](https://github.com/0918nobita/obsidian-zhongwen-block/pull/69))
