@@ -8,13 +8,15 @@
         "build": "vite build",
         "lint": "eslint .",
         "format": "prettier --write .",
-        "format:check": "prettier --check ."
+        "format:check": "prettier --check .",
+        "memlab": "memlab run --scenario ./scenario.cjs --work-dir ./memlab"
     },
     "devDependencies": {
         "@types/node": "20.11.24",
         "@vanilla-extract/vite-plugin": "4.0.4",
         "eslint": "8.57.0",
         "globals": "14.0.0",
+        "memlab": "1.1.45",
         "obsidian": "1.5.7-1",
         "prettier": "3.2.5",
         "typescript": "5.3.3",
