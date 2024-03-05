@@ -1,11 +1,14 @@
-import type { Lang } from './i18n';
+import { z } from 'zod';
 
-export interface Settings {
-    alwaysDisplayPinyin: boolean;
-    lang: Lang;
-}
+export const settings = z
+    .object({
+        alwaysDisplayPinyin: z.boolean().optional().default(false).catch(false),
+        lang: z
+            .union([z.literal('en-US'), z.literal('ja-JP')])
+            .optional()
+            .default('en-US')
+            .catch('en-US'),
+    })
+    .catch({ alwaysDisplayPinyin: false, lang: 'en-US' });
 
-export const defaultSettings: Settings = {
-    alwaysDisplayPinyin: false,
-    lang: 'en-US',
-};
+export type Settings = z.infer<typeof settings>;
