@@ -1,0 +1,15 @@
+{
+    "name": "@0918nobita/zhongwen-code-block-processor",
+    "version": "0.1.0",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "build": "tsc"
+    },
+    "devDependencies": {
+        "typescript": "5.3.3"
+    },
+    "dependencies": {
+        "pinyin-pro": "3.19.6"
+    }
+}
