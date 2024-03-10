@@ -24,6 +24,9 @@ export class ZhCharLine {
     }
 
     appendNonZhSegment({ nonZhChars }: { nonZhChars: string }): void {
-        this.#el.appendText(nonZhChars);
+        this.#el.createSpan({
+            cls: styles.visibleNonZhBlock,
+            text: nonZhChars,
+        });
     }
 }
