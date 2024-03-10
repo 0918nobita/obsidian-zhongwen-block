@@ -12,7 +12,7 @@
     },
     "devDependencies": {
         "@types/node": "20.11.25",
-        "@vanilla-extract/vite-plugin": "4.0.4",
+        "@vanilla-extract/vite-plugin": "4.0.6",
         "eslint": "8.57.0",
         "globals": "14.0.0",
         "obsidian": "1.5.7-1",
