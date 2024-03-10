@@ -1,3 +1,16 @@
+## [0.6.1](https://github.com/0918nobita/obsidian-zhongwen-block/compare/0.6.0...0.6.1) (2024-03-10)
+
+### Bug fixes
+
+-   Fix the styles of code block processor to display line breaks as they are (PR: [#80](https://github.com/0918nobita/obsidian-zhongwen-block/issues/80)) (Issue: [#75](https://github.com/0918nobita/obsidian-zhongwen-block/issues/75)), huge thanks to [@orkunzozturk](https://github.com/orkunzozturk) for helping!
+
+### Update dependencies
+
+| package                      | from  | to    |
+| ---------------------------- | ----- | ----- |
+| @vanilla-extract/vite-plugin | 4.0.4 | 4.0.6 |
+| vite                         | 5.1.4 | 5.1.5 |
+
 ## [0.6.0](https://github.com/0918nobita/obsidian-zhongwen-block/compare/0.5.1...0.6.0) (2024-03-04)
 
 ### Features
@@ -10,10 +23,11 @@
 
 ### Update dependencies
 
-| package    | from   | to     |
-| ---------- | ------ | ------ |
-| pinyin-pro | 3.19.3 | 3.19.6 |
-| vite       | 5.0.12 | 5.1.4  |
+| package                      | from   | to     |
+| ---------------------------- | ------ | ------ |
+| @vanilla-extract/vite-plugin | 3.9.5  | 4.0.4  |
+| pinyin-pro                   | 3.19.3 | 3.19.6 |
+| vite                         | 5.0.12 | 5.1.4  |
 
 ## [0.5.0](https://github.com/0918nobita/obsidian-zhongwen-block/compare/0.4.1...0.5.0) (2024-01-28)
 
