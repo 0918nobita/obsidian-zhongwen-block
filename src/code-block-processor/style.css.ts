@@ -28,6 +28,7 @@ export const hiddenZhChar = style({
 
 export const hiddenNonZh = style({
     opacity: '0',
+    whiteSpace: 'pre',
 });
 
 export const pinyin = {
@@ -59,4 +60,8 @@ export const zhCharLine = style({
 
 export const visibleZhBlock = style({
     display: 'inline-block',
+});
+
+export const visibleNonZhBlock = style({
+    whiteSpace: 'pre',
 });
