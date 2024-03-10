@@ -19,7 +19,7 @@
         "prettier": "3.2.5",
         "typescript": "5.3.3",
         "typescript-eslint": "7.1.1",
-        "vite": "5.1.4"
+        "vite": "5.1.5"
     },
     "dependencies": {
         "@vanilla-extract/css": "1.14.1",
