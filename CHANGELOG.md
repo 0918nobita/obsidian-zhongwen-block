@@ -1,3 +1,15 @@
+## [0.6.2](https://github.com/0918nobita/obsidian-zhongwen-block/compare/0.6.1...0.6.2) (2024-05-09)
+
+### Update dependencies
+
+| package                      | from   | to     |
+| ---------------------------- | ------ | ------ |
+| @vanilla-extract/css         | 1.14.1 | 1.15.1 |
+| @vanilla-extract/vite-plugin | 4.0.6  | 4.0.9  |
+| pinyin-pro                   | 3.19.6 | 3.20.4 |
+| typescript                   | 5.3.3  | 5.4.5  |
+| vite                         | 5.1.5  | 5.2.11 |
+
 ## [0.6.1](https://github.com/0918nobita/obsidian-zhongwen-block/compare/0.6.0...0.6.1) (2024-03-10)
 
 ### Bug fixes
