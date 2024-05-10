@@ -12,6 +12,7 @@
         "format:check": "prettier --check ."
     },
     "devDependencies": {
+        "@sveltejs/vite-plugin-svelte": "3.1.0",
         "@types/node": "20.12.11",
         "@vanilla-extract/vite-plugin": "4.0.9",
         "eslint": "8.57.0",
