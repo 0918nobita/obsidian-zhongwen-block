@@ -18,6 +18,6 @@ export class HiddenZhChar {
 
     setPadding(padding: number): void {
         this.#el.style.paddingLeft =
-            this.#el.style.paddingRight = `${padding}px`;
+            this.#el.style.paddingRight = `${String(padding)}px`;
     }
 }

@@ -4,12 +4,10 @@ import eslint from '@eslint/js';
 import globals from 'globals';
 import tseslint from 'typescript-eslint';
 
-/** @type {import('typescript-eslint').Config} */
-export default [
+export default tseslint.config(
     {
         ignores: ['dist'],
     },
-
     {
         languageOptions: {
             globals: {
@@ -18,31 +16,18 @@ export default [
             },
         },
     },
-
     eslint.configs.recommended,
-
+    ...tseslint.configs.strictTypeChecked,
+    ...tseslint.configs.stylisticTypeChecked,
     {
-        files: ['**/*.ts'],
         languageOptions: {
             parserOptions: {
                 project: true,
-                tsconfigRootDir: import.meta.dirname,
             },
         },
     },
-
     {
         files: ['**/*.js'],
         ...tseslint.configs.disableTypeChecked,
     },
-
-    ...tseslint.configs.recommendedTypeChecked.map((config) => ({
-        ...config,
-        files: ['**/*.ts'],
-    })),
-
-    ...tseslint.configs.stylisticTypeChecked.map((config) => ({
-        ...config,
-        files: ['**/*.ts'],
-    })),
-];
+);

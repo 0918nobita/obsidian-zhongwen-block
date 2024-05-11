@@ -20,7 +20,7 @@ export class ZhCharLine {
         });
 
         zhBlock.style.paddingLeft =
-            zhBlock.style.paddingRight = `${zhCharPadding}px`;
+            zhBlock.style.paddingRight = `${String(zhCharPadding)}px`;
     }
 
     appendNonZhSegment({ nonZhChars }: { nonZhChars: string }): void {
