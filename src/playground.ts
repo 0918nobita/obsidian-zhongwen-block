@@ -1,5 +1,7 @@
 import { type HanziWriterOptions, default as HW } from 'hanzi-writer';
 
+import CodeBlock from './code-block-processor/code-block.svelte';
+
 const hwOptions: Partial<HanziWriterOptions> = {
     width: 100,
     height: 100,
@@ -30,4 +32,14 @@ btn.addEventListener('click', async () => {
     await new Promise((resolve) => setTimeout(resolve, delayBetweenAnimations));
 
     await c2Writer.animateCharacter();
+});
+
+const app = document.createElement('div');
+document.body.appendChild(app);
+
+new CodeBlock({
+    target: app,
+    props: {
+        source: '你好！初次见面',
+    },
 });
