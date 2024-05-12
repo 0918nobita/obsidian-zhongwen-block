@@ -1,3 +1,7 @@
+## [0.7.0](https://github.com/0918nobita/obsidian-zhongwen-block/compare/0.6.2...0.7.0) (2024-05-12)
+
+-   Reimplement the code block processor using Svelte (PR: [#86](https://github.com/0918nobita/obsidian-zhongwen-block/pull/86))
+
 ## [0.6.2](https://github.com/0918nobita/obsidian-zhongwen-block/compare/0.6.1...0.6.2) (2024-05-09)
 
 ### Update dependencies
