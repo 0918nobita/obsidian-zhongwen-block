@@ -1,15 +1,15 @@
 // @ts-check
 
 import eslint from '@eslint/js';
+import eslintPluginSvelte from 'eslint-plugin-svelte';
 import globals from 'globals';
+import svelteParser from 'svelte-eslint-parser';
 import tseslint from 'typescript-eslint';
 
-/** @type {import('typescript-eslint').Config} */
-export default [
+export default tseslint.config(
     {
         ignores: ['dist'],
     },
-
     {
         languageOptions: {
             globals: {
@@ -18,31 +18,31 @@ export default [
             },
         },
     },
-
     eslint.configs.recommended,
-
+    ...tseslint.configs.strictTypeChecked,
+    ...tseslint.configs.stylisticTypeChecked,
     {
-        files: ['**/*.ts'],
         languageOptions: {
             parserOptions: {
                 project: true,
-                tsconfigRootDir: import.meta.dirname,
+                extraFileExtensions: ['.svelte'],
             },
         },
     },
-
     {
         files: ['**/*.js'],
         ...tseslint.configs.disableTypeChecked,
     },
-
-    ...tseslint.configs.recommendedTypeChecked.map((config) => ({
-        ...config,
-        files: ['**/*.ts'],
-    })),
-
-    ...tseslint.configs.stylisticTypeChecked.map((config) => ({
-        ...config,
-        files: ['**/*.ts'],
-    })),
-];
+    {
+        files: ['**/*.svelte'],
+        plugins: {
+            svelte: eslintPluginSvelte,
+        },
+        languageOptions: {
+            parser: svelteParser,
+            parserOptions: {
+                parser: tseslint.parser,
+            },
+        },
+    },
+);

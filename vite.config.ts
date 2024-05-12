@@ -1,4 +1,4 @@
-import { vanillaExtractPlugin } from '@vanilla-extract/vite-plugin';
+import { svelte } from '@sveltejs/vite-plugin-svelte';
 import { defineConfig } from 'vite';
 
 export default defineConfig({
@@ -19,9 +19,5 @@ export default defineConfig({
             external: ['obsidian'],
         },
     },
-    plugins: [
-        vanillaExtractPlugin({
-            identifiers: ({ hash }) => `zhongwenBlock_${hash}`,
-        }),
-    ],
+    plugins: [svelte()],
 });

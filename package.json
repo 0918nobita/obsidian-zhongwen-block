@@ -2,6 +2,7 @@
     "name": "@0918nobita/obsidian-zhongwen-block",
     "version": "0.6.2",
     "description": "An Obsidian plugin which provides code blocks with features for Chinese learners",
+    "license": "MIT",
     "private": "true",
     "type": "module",
     "scripts": {
@@ -11,22 +12,20 @@
         "format:check": "prettier --check ."
     },
     "devDependencies": {
+        "@sveltejs/vite-plugin-svelte": "3.1.0",
         "@types/node": "20.12.11",
-        "@vanilla-extract/vite-plugin": "4.0.9",
         "eslint": "8.57.0",
+        "eslint-plugin-svelte": "2.39.0",
         "globals": "15.1.0",
         "obsidian": "1.5.7-1",
         "prettier": "3.2.5",
+        "prettier-plugin-svelte": "3.2.3",
+        "svelte-eslint-parser": "0.36.0",
         "typescript": "5.4.5",
         "typescript-eslint": "7.8.0",
         "vite": "5.2.11"
     },
     "dependencies": {
-        "@vanilla-extract/css": "1.15.1",
         "pinyin-pro": "3.20.4"
-    },
-    "prettier": {
-        "semi": true,
-        "singleQuote": true
     }
 }

@@ -1,20 +1,9 @@
 import * as Obsidian from 'obsidian';
 
-import { codeBlockProcessor, type LayoutMemo } from './code-block-processor';
+import CodeBlock from './code-block.svelte';
 import type { Plugin } from './plugin';
 import { type Settings, defaultSettings } from './settings';
 import { SettingTabImpl } from './setting-tab-impl';
-
-const domReady = (): Promise<void> =>
-    new Promise((resolve) => {
-        if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', () => {
-                resolve();
-            });
-        } else {
-            resolve();
-        }
-    });
 
 export class PluginImpl extends Obsidian.Plugin implements Plugin {
     settings!: Settings;
@@ -28,21 +17,15 @@ export class PluginImpl extends Obsidian.Plugin implements Plugin {
 
         this.addSettingTab(new SettingTabImpl(this.app, this));
 
-        const layoutMemo: LayoutMemo = new Map();
-
-        this.registerMarkdownCodeBlockProcessor(
-            'zh-cn',
-            async (source, element) => {
-                await domReady();
-
-                await codeBlockProcessor(
+        this.registerMarkdownCodeBlockProcessor('zh-cn', (source, element) => {
+            new CodeBlock({
+                target: element,
+                props: {
                     source,
-                    element,
-                    this.settings,
-                    layoutMemo,
-                );
-            },
-        );
+                    alwaysDisplayPinyin: this.settings.alwaysDisplayPinyin,
+                },
+            });
+        });
     }
 
     async saveSettings() {
