@@ -16,7 +16,7 @@
         "@types/node": "20.12.11",
         "eslint": "8.57.0",
         "eslint-plugin-svelte": "2.39.0",
-        "globals": "15.1.0",
+        "globals": "15.2.0",
         "obsidian": "1.5.7-1",
         "prettier": "3.2.5",
         "prettier-plugin-svelte": "3.2.3",
