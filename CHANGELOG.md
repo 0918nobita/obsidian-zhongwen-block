@@ -1,3 +1,14 @@
+## [0.7.1](https://github.com/0918nobita/obsidian-zhongwen-block/compare/0.7.0...0.7.1) (2024-10-05)
+
+### Update dependencies
+
+| package    | from    | to     |
+| ---------- | ------- | ------ |
+| obsidian   | 1.5.7-1 | 1.7.2  |
+| pinyin-pro | 3.20.4  | 3.25.0 |
+| typescript | 5.4.5   | 5.5.4  |
+| vite       | 5.2.11  | 5.4.8  |
+
 ## [0.7.0](https://github.com/0918nobita/obsidian-zhongwen-block/compare/0.6.2...0.7.0) (2024-05-12)
 
 -   Reimplement the code block processor using Svelte (PR: [#86](https://github.com/0918nobita/obsidian-zhongwen-block/pull/86))
