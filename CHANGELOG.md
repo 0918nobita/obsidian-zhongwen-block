@@ -11,7 +11,7 @@
 
 ## [0.7.0](https://github.com/0918nobita/obsidian-zhongwen-block/compare/0.6.2...0.7.0) (2024-05-12)
 
--   Reimplement the code block processor using Svelte (PR: [#86](https://github.com/0918nobita/obsidian-zhongwen-block/pull/86))
+- Reimplement the code block processor using Svelte (PR: [#86](https://github.com/0918nobita/obsidian-zhongwen-block/pull/86))
 
 ## [0.6.2](https://github.com/0918nobita/obsidian-zhongwen-block/compare/0.6.1...0.6.2) (2024-05-09)
 
@@ -29,7 +29,7 @@
 
 ### Bug fixes
 
--   Fix the styles of code block processor to display line breaks as they are (PR: [#80](https://github.com/0918nobita/obsidian-zhongwen-block/issues/80)) (Issue: [#75](https://github.com/0918nobita/obsidian-zhongwen-block/issues/75)), huge thanks to [@orkunzozturk](https://github.com/orkunzozturk) for helping!
+- Fix the styles of code block processor to display line breaks as they are (PR: [#80](https://github.com/0918nobita/obsidian-zhongwen-block/issues/80)) (Issue: [#75](https://github.com/0918nobita/obsidian-zhongwen-block/issues/75)), huge thanks to [@orkunzozturk](https://github.com/orkunzozturk) for helping!
 
 ### Update dependencies
 
@@ -42,11 +42,11 @@
 
 ### Features
 
--   Support for Japanese in settings tab (PR: [#72](https://github.com/0918nobita/obsidian-zhongwen-block/pull/72))
+- Support for Japanese in settings tab (PR: [#72](https://github.com/0918nobita/obsidian-zhongwen-block/pull/72))
 
 ## [0.5.1](https://github.com/0918nobita/obsidian-zhongwen-block/compare/0.5.0...0.5.1) (2024-03-02)
 
--   Migrate `typescript-eslint` from v6 to v7 (flat config) (PR: [#69](https://github.com/0918nobita/obsidian-zhongwen-block/pull/69))
+- Migrate `typescript-eslint` from v6 to v7 (flat config) (PR: [#69](https://github.com/0918nobita/obsidian-zhongwen-block/pull/69))
 
 ### Update dependencies
 
@@ -58,7 +58,7 @@
 
 ## [0.5.0](https://github.com/0918nobita/obsidian-zhongwen-block/compare/0.4.1...0.5.0) (2024-01-28)
 
--   Refactor code block processor (PR: [#52](https://github.com/0918nobita/obsidian-zhongwen-block/pull/52))
+- Refactor code block processor (PR: [#52](https://github.com/0918nobita/obsidian-zhongwen-block/pull/52))
 
 ### Update dependencies
 
@@ -71,8 +71,8 @@
 
 ## [0.4.1](https://github.com/0918nobita/obsidian-zhongwen-block/compare/0.4.0...0.4.1) (2023-12-30)
 
--   Improve accessibiity of rendered content (PR: [#42](https://github.com/0918nobita/obsidian-zhongwen-block/pull/42))
--   Migrate this npm package to fully ESM (PR: [#44](https://github.com/0918nobita/obsidian-zhongwen-block/pull/44) and [#45](https://github.com/0918nobita/obsidian-zhongwen-block/pull/45))
+- Improve accessibiity of rendered content (PR: [#42](https://github.com/0918nobita/obsidian-zhongwen-block/pull/42))
+- Migrate this npm package to fully ESM (PR: [#44](https://github.com/0918nobita/obsidian-zhongwen-block/pull/44) and [#45](https://github.com/0918nobita/obsidian-zhongwen-block/pull/45))
 
 ### Update dependencies
 
@@ -82,13 +82,13 @@
 
 ## [0.4.0](https://github.com/0918nobita/obsidian-zhongwen-block/compare/0.3.3...0.4.0) (2023-12-27)
 
--   Improve the performance of this plugin's code block processor using memorization (PR: [#36](https://github.com/0918nobita/obsidian-zhongwen-block/pull/36))
+- Improve the performance of this plugin's code block processor using memorization (PR: [#36](https://github.com/0918nobita/obsidian-zhongwen-block/pull/36))
 
 ## [0.3.3](https://github.com/0918nobita/obsidian-zhongwen-block/compare/0.3.2...0.3.3) (2023-12-25)
 
 ### Bug Fixes
 
--   Fix a bug that broke the layout of elements drawn off-screen by this plugin (PR: [#32](https://github.com/0918nobita/obsidian-zhongwen-block/pull/32))
+- Fix a bug that broke the layout of elements drawn off-screen by this plugin (PR: [#32](https://github.com/0918nobita/obsidian-zhongwen-block/pull/32))
 
 ## [0.3.2](https://github.com/0918nobita/obsidian-zhongwen-block/compare/0.3.1...0.3.2) (2023-12-23)
 
@@ -105,19 +105,19 @@
 
 ### Bug Fixes
 
--   Fix a display bug in Live Preview mode (PR: [#18](https://github.com/0918nobita/obsidian-zhongwen-block/pull/18)) (Issue: [#16](https://github.com/0918nobita/obsidian-zhongwen-block/issues/16)), huge thanks to [@mariomui](https://github.com/mariomui) for helping!
+- Fix a display bug in Live Preview mode (PR: [#18](https://github.com/0918nobita/obsidian-zhongwen-block/pull/18)) (Issue: [#16](https://github.com/0918nobita/obsidian-zhongwen-block/issues/16)), huge thanks to [@mariomui](https://github.com/mariomui) for helping!
 
 ## [0.3.0](https://github.com/0918nobita/obsidian-zhongwen-block/compare/0.2.0...0.3.0) (2023-11-13)
 
 ### Features
 
--   Add settings tab
--   Support for toggling whether each pinyin is always displayed or not from the settings tab
+- Add settings tab
+- Support for toggling whether each pinyin is always displayed or not from the settings tab
 
 ## [0.2.0](https://github.com/0918nobita/obsidian-zhongwen-block/compare/0.1.0...0.2.0) (2023-11-12)
 
--   Refactor DOM manipulation
--   Remove dependencies that are no longer needed
+- Refactor DOM manipulation
+- Remove dependencies that are no longer needed
 
 ## 0.1.0 (2023-11-12)
 
