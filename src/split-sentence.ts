@@ -16,7 +16,7 @@ function isZh(c: string): boolean {
 }
 
 export function splitSentenceIntoSegments(sentence: string): Segment[] {
-    const chars = [...sentence];
+    const chars = Array.from(sentence);
 
     const result: Segment[] = [];
     let currentSegment: Segment | null = null;
