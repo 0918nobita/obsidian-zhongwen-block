@@ -1,3 +1,20 @@
+## [0.7.2](https://github.com/0918nobita/obsidian-zhongwen-block/compare/0.7.1...0.7.2) (2025-04-26)
+
+- Migrate Svelte from v4 to v5
+
+### Bug fixes
+
+- Fix the line break rendering problem in code blocks (Issue: [#94](https://github.com/0918nobita/obsidian-zhongwen-block/issues/94), huge thanks to [@fredricsanjaya](https://github.com/fredricsanjaya) and [@dannephew](https://github.com/dannephew) for helping!)
+
+### Update dependencies
+
+| package | from | to |
+| --- | --- | --- |
+| obsidian | 1.7.2 | 1.8.7 |
+| pinyin-pro | 3.25.0 | 3.26.0 |
+| typescript | 5.5.4 | 5.8.3 |
+| vite | 5.4.8 | 6.3.3 |
+
 ## [0.7.1](https://github.com/0918nobita/obsidian-zhongwen-block/compare/0.7.0...0.7.1) (2024-10-05)
 
 ### Update dependencies
