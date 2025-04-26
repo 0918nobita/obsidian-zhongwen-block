@@ -1,4 +1,4 @@
-import * as Obsidian from 'obsidian';
+import type * as Obsidian from 'obsidian';
 
 import type { Plugin } from './plugin';
 

@@ -1,4 +1,5 @@
 import * as Obsidian from 'obsidian';
+import { mount } from 'svelte';
 
 import CodeBlock from './code-block.svelte';
 import type { Plugin } from './plugin';
@@ -18,7 +19,7 @@ export class PluginImpl extends Obsidian.Plugin implements Plugin {
         this.addSettingTab(new SettingTabImpl(this.app, this));
 
         this.registerMarkdownCodeBlockProcessor('zh-cn', (source, element) => {
-            new CodeBlock({
+            mount(CodeBlock, {
                 target: element,
                 props: {
                     source,
