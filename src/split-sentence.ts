@@ -28,19 +28,13 @@ export function splitSentenceIntoSegments(sentence: string): Segment[] {
                 continue;
             }
 
-            currentSegment = {
-                type: 'zh',
-                zhChars: c,
-            };
+            currentSegment = { type: 'zh', zhChars: c };
             result.push(currentSegment);
             continue;
         }
 
         if (currentSegment === null || currentSegment.type === 'zh') {
-            currentSegment = {
-                type: 'nonZh',
-                nonZhChars: c,
-            };
+            currentSegment = { type: 'nonZh', nonZhChars: c };
             result.push(currentSegment);
             continue;
         }

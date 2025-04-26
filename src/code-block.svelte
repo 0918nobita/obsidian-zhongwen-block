@@ -1,18 +1,14 @@
 <script lang="ts">
-    import { onMount } from 'svelte';
+import { getPinyin } from './get-pinyin';
+import { type Segment, splitSentenceIntoSegments } from './split-sentence';
 
-    import { getPinyin } from './get-pinyin';
-    import { type Segment, splitSentenceIntoSegments } from './split-sentence';
+const { source, alwaysDisplayPinyin } = $props();
 
-    export let source: string;
+let segments: Segment[] = $state([]);
 
-    export let alwaysDisplayPinyin: boolean;
-
-    let segments: Segment[] = [];
-
-    onMount(() => {
-        segments = splitSentenceIntoSegments(source.trim());
-    });
+$effect(() => {
+    segments = splitSentenceIntoSegments(source.trim());
+});
 </script>
 
 <div
