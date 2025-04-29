@@ -4,9 +4,11 @@ on:
   push:
     paths:
       - '.github/workflows/lint.yml'
+      - 'src/**/*.svelte'
       - 'src/**/*.ts'
       - '.editorconfig'
-      - 'eslint.config.js'
+      - 'biome.json'
+      - 'bun.lockb'
       - 'package.json'
       - 'tsconfig.json'
       - 'vite.config.ts'

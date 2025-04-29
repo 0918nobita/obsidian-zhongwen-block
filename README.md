@@ -52,20 +52,26 @@ When `true`, each pinyin will be displayed from the beginning.
 
 ## Development
 
+### Install dependencies
+
+```bash
+$ bun i
+```
+
 ### Build
 
 ```bash
-$ npm run build
+$ bun run build
 ```
 
 ### Lint
 
 ```bash
-$ npm run lint
+$ bun run lint
 ```
 
 ### Format
 
 ```bash
-$ npm run format
+$ bun run format
 ```

@@ -4,9 +4,11 @@ on:
   push:
     paths:
       - '.editorconfig'
+      - 'biome.json'
       - '**/*.js'
       - '**/*.json'
       - '**/*.md'
+      - '**/*.svelte'
       - '**/*.ts'
       - '**/*.yml'
 

@@ -50,20 +50,26 @@
 
 ## 開発
 
+## 依存パッケージのインストール
+
+```bash
+$ bun i
+```
+
 ### ビルド
 
 ```bash
-$ npm run build
+$ bun run build
 ```
 
 ### Lint
 
 ```bash
-$ npm run lint
+$ bun run lint
 ```
 
 ### ソースコードをフォーマットする
 
 ```bash
-$ npm run format
+$ bun run format
 ```

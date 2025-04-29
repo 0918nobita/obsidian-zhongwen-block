@@ -1,3 +1,7 @@
+## [0.7.3](https://github.com/0918nobita/obsidian-zhongwen-block/compare/0.7.2...0.7.3) (2025-04-29)
+
+- Fix display issue where long texts don't wrap at screen edges (Issue: [#100](https://github.com/0918nobita/obsidian-zhongwen-block/issues/100), huge thanks to [@fredricsanjaya](https://github.com/fredricsanjaya) for continuously helping improve this plugin!)
+
 ## [0.7.2](https://github.com/0918nobita/obsidian-zhongwen-block/compare/0.7.1...0.7.2) (2025-04-26)
 
 - Migrate Svelte from v4 to v5

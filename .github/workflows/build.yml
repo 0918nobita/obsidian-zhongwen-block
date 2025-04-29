@@ -4,9 +4,10 @@ on:
   push:
     paths:
       - '.github/workflows/build.yml'
+      - 'src/**/*.svelte'
       - 'src/**/*.ts'
+      - 'bun.lockb'
       - 'package.json'
-      - 'package-lock.json'
       - 'tsconfig.json'
       - 'vite.config.ts'
 

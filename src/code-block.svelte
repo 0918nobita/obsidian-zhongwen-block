@@ -47,6 +47,7 @@ $effect(() => {
     .line {
         display: inline-flex;
         align-items: flex-end;
+        flex-wrap: wrap;
     }
 
     ruby {
