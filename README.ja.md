@@ -4,7 +4,9 @@
 
 `zh-cn` コードブロック内の各中国語文は、対応するピンインをルビとして付与したうえで表示されます。
 
-発音を覚えるのを促すために、ピンインは中国語文にマウスホバーしている間だけ表示されます。
+`zh-hk` コードブロック内の各中国語文は、対応する粤拼（jyutping）をルビとして付与したうえで表示されます。
+
+発音を覚えるのを促すために、ピンイン/粤拼は中国語文にマウスホバーしている間だけ表示されます。
 
 ![Screen recording](images/screen-recording.gif)
 
@@ -45,12 +47,13 @@
 ## 帰属
 
 - 中国語からピンインに変換するために、[pinyin-pro](https://github.com/zh-lx/pinyin-pro) を利用しています。
+- 中国語から粤拼に変換するために、[to-jyutping](https://github.com/CanCLID/to-jyutping) を利用しています。
 
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2F0918nobita%2Fobsidian-zhongwen-block.svg?type=large&issueType=license)](https://app.fossa.com/projects/git%2Bgithub.com%2F0918nobita%2Fobsidian-zhongwen-block?ref=badge_large&issueType=license)
 
 ## 開発
 
-## 依存パッケージのインストール
+### 依存パッケージのインストール
 
 ```bash
 $ bun i
@@ -72,4 +75,10 @@ $ bun run lint
 
 ```bash
 $ bun run format
+```
+
+### テスト
+
+```bash
+$ bun test
 ```
