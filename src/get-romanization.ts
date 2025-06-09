@@ -39,8 +39,8 @@ export const getJyutping = once(
         new Promise<RomanizationData[]>((resolve) => {
             resolve(
                 getJyutpingList(sentence).map(([char, jyutping]) => ({
-                    // this function will only be called on chinese characters 
-                    // so we are guaranteed to return a string here. 
+                    // this function will only be called on chinese characters
+                    // so we are guaranteed to return a string here.
                     // In worst case, lets return an empty string.
                     romanization: jyutping ?? '',
                     origin: char,

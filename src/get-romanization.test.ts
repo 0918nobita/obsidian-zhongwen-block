@@ -10,6 +10,11 @@ describe('getPinyin', () => {
         ]);
     });
 
+    it('should handle non chinese characters', async () => {
+        const result = await getPinyin('.');
+        expect(result).toEqual([{ romanization: '', origin: '.' }]);
+    });
+
     it('should handle empty string', async () => {
         const result = await getPinyin('');
         expect(result).toEqual([]);
@@ -31,16 +36,14 @@ describe('getJyutping', () => {
         ]);
     });
 
+    it('should handle non chinese characters', async () => {
+        const result = await getJyutping('.');
+        expect(result).toEqual([{ romanization: '', origin: '.' }]);
+    });
+
     it('should handle empty string', async () => {
         const result = await getJyutping('');
         expect(result).toEqual([]);
-    });
-
-    it('should handle characters without jyutping', async () => {
-        const result = await getJyutping('𠀀'); // A rare/uncommon character
-        expect(result).toEqual([
-            { romanization: '', origin: '𠀀' },
-        ]);
     });
 
     it('should memoize results for the same input', async () => {
@@ -48,4 +51,4 @@ describe('getJyutping', () => {
         const secondCall = await getJyutping('你好');
         expect(firstCall).toBe(secondCall); // Same reference due to memoization
     });
-}); 
+});
