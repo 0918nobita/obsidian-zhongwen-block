@@ -19,6 +19,7 @@
         "vite": "6.3.3"
     },
     "dependencies": {
-        "pinyin-pro": "3.26.0"
+        "pinyin-pro": "3.26.0",
+        "to-jyutping": "3.1.1"
     }
 }
