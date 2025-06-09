@@ -44,6 +44,8 @@
 
 `true` の場合、最初からピンインが表示された状態になります。
 
+![Reading view (Always show)](images/reading-view-always-show.png)
+
 ## 帰属
 
 - 中国語からピンインに変換するために、[pinyin-pro](https://github.com/zh-lx/pinyin-pro) を利用しています。

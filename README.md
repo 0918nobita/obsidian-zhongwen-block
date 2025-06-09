@@ -46,6 +46,8 @@ Default: `false`
 
 When `true`, each pinyin will be displayed from the beginning.
 
+![Reading view (Always show)](images/reading-view-always-show.png)
+
 ## Attribution
 
 - Zhongwen Block depends on [pinyin-pro](https://github.com/zh-lx/pinyin-pro) in order to convert Chinese into pinyin.
