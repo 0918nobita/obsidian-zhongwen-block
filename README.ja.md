@@ -44,7 +44,7 @@
 
 `true` の場合、最初からピンインが表示された状態になります。
 
-![Reading view (Always show)](images/reading-view-always-show.png)
+![リーディングビュー（常時表示）](images/reading-view-always-show.png)
 
 ## 帰属
 
@@ -55,7 +55,7 @@
 
 ## 開発
 
-### 依存パッケージのインストール
+## 依存パッケージのインストール
 
 ```bash
 $ bun i
