@@ -6,7 +6,9 @@ An Obsidian plugin which provides code blocks with features for Chinese learners
 
 Each Chinese sentence in `zh-cn` code block will be annotated with corresponding pinyin as ruby.
 
-In order to help you remember the pronunciation, each pinyin is displayed only while the Chinese sentence is hovered.
+Each Chinese sentence in `zh-hk` code block will be annotated with corresponding jyutping as ruby.
+
+In order to help you remember the pronunciation, each pinyin/jyutping is displayed only while the Chinese sentence is hovered.
 
 ![Screen recording](images/screen-recording.gif)
 
@@ -44,9 +46,12 @@ Default: `false`
 
 When `true`, each pinyin will be displayed from the beginning.
 
+![Reading view (Always show)](images/reading-view-always-show.png)
+
 ## Attribution
 
 - Zhongwen Block depends on [pinyin-pro](https://github.com/zh-lx/pinyin-pro) in order to convert Chinese into pinyin.
+- Zhongwen Block depends on [to-jyutping](https://github.com/CanCLID/to-jyutping) in order to convert Chinese into jyutping.
 
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2F0918nobita%2Fobsidian-zhongwen-block.svg?type=large&issueType=license)](https://app.fossa.com/projects/git%2Bgithub.com%2F0918nobita%2Fobsidian-zhongwen-block?ref=badge_large&issueType=license)
 
@@ -74,4 +79,11 @@ $ bun run lint
 
 ```bash
 $ bun run format
+```
+
+
+### Test
+
+```bash
+$ bun test
 ```

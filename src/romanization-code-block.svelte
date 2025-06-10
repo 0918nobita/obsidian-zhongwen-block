@@ -1,8 +1,13 @@
 <script lang="ts">
-import { getPinyin } from './get-pinyin';
 import { type Segment, splitIntoSegmentsPerLine } from './split-sentence';
+import type { RomanizationData } from './get-romanization';
 
-const { source, alwaysDisplayPinyin } = $props();
+const { source, alwaysDisplayPinyin, lang, getRomanization } = $props<{
+    source: string;
+    alwaysDisplayPinyin: boolean;
+    lang: string;
+    getRomanization: (sentence: string) => Promise<RomanizationData[]>;
+}>();
 
 let segmentsPerLine: Segment[][] = $state([]);
 
@@ -12,7 +17,7 @@ $effect(() => {
 </script>
 
 <div
-    lang="zh-CN"
+    {lang}
     class="container"
     data-always-display-pinyin={alwaysDisplayPinyin}
 >
@@ -20,9 +25,9 @@ $effect(() => {
         <div class="line">
             {#each segments as segment}
                 {#if segment.type === 'zh'}
-                    {#await getPinyin(segment.zhChars) then pinyinData}
-                        {#each pinyinData as { pinyin, origin: zhChar }}
-                            <ruby>{zhChar}<rt>{pinyin}</rt></ruby>
+                    {#await getRomanization(segment.zhChars) then romanizationData}
+                        {#each romanizationData as { romanization, origin }}
+                            <ruby>{origin}<rt>{romanization}</rt></ruby>
                         {/each}
                     {/await}
                 {:else}
@@ -78,4 +83,4 @@ $effect(() => {
         padding-left: 1px;
         padding-right: 1px;
     }
-</style>
+</style> 

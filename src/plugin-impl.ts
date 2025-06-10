@@ -1,7 +1,8 @@
 import * as Obsidian from 'obsidian';
 import { mount } from 'svelte';
 
-import CodeBlock from './code-block.svelte';
+import PinyinCodeBlock from './pinyin-code-block.svelte';
+import JyutpingCodeBlock from './jyutping-code-block.svelte';
 import type { Plugin } from './plugin';
 import { type Settings, defaultSettings } from './settings';
 import { SettingTabImpl } from './setting-tab-impl';
@@ -18,8 +19,20 @@ export class PluginImpl extends Obsidian.Plugin implements Plugin {
 
         this.addSettingTab(new SettingTabImpl(this.app, this));
 
+        // Register code block processor for Mandarin (Pinyin)
         this.registerMarkdownCodeBlockProcessor('zh-cn', (source, element) => {
-            mount(CodeBlock, {
+            mount(PinyinCodeBlock, {
+                target: element,
+                props: {
+                    source,
+                    alwaysDisplayPinyin: this.settings.alwaysDisplayPinyin,
+                },
+            });
+        });
+
+        // Register code block processor for Cantonese (Jyutping)
+        this.registerMarkdownCodeBlockProcessor('zh-hk', (source, element) => {
+            mount(JyutpingCodeBlock, {
                 target: element,
                 props: {
                     source,
