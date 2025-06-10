@@ -44,7 +44,7 @@
 
 `true` の場合、最初からピンインが表示された状態になります。
 
-![リーディングビュー（常時表示）](images/reading-view-always-show.png)
+![Reading view (Always show)](images/reading-view-always-show.png)
 
 ## 帰属
 
