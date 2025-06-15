@@ -1,5 +1,5 @@
 import * as Obsidian from 'obsidian';
-import { mount } from 'svelte';
+import { mount, type Component } from 'svelte';
 
 import PinyinCodeBlock from './pinyin-code-block.svelte';
 import JyutpingCodeBlock from './jyutping-code-block.svelte';
