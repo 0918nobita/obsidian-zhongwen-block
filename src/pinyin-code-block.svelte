@@ -1,4 +1,5 @@
 <script lang="ts">
+import { type Segment, splitIntoSegmentsPerLine } from './split-sentence';
 import { getPinyin } from './get-romanization';
 
 const { source, alwaysDisplayPinyin } = $props();
