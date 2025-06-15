@@ -1,6 +1,6 @@
 <script lang="ts">
+import { getJyutping, type RomanizationData } from './get-romanization';
 import { type Segment, splitIntoSegmentsPerLine } from './split-sentence';
-import { getJyutping, RomanizationData } from './get-romanization';
 
 const { source, alwaysDisplayPinyin } = $props();
 
