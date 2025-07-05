@@ -1,11 +1,11 @@
 {
-    "id": "zhongwen-block",
-    "name": "Zhongwen Block",
-    "version": "0.7.3",
-    "minAppVersion": "0.15.0",
-    "description": "Provides code blocks with features for Chinese learners",
-    "author": "Kodai Matsumoto",
-    "authorUrl": "https://github.com/0918nobita",
-    "fundingUrl": "https://github.com/sponsors/0918nobita",
-    "isDesktopOnly": false
+  "id": "zhongwen-block",
+  "name": "Zhongwen Block",
+  "version": "0.7.3",
+  "minAppVersion": "0.15.0",
+  "description": "Provides code blocks with features for Chinese learners",
+  "author": "Kodai Matsumoto",
+  "authorUrl": "https://github.com/0918nobita",
+  "fundingUrl": "https://github.com/sponsors/0918nobita",
+  "isDesktopOnly": false
 }

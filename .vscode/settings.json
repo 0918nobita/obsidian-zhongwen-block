@@ -1,6 +1,9 @@
 {
-    "svelte.enable-ts-plugin": true,
-    "[svelte]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    }
+  "svelte.enable-ts-plugin": true,
+  "[svelte]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  }
 }
