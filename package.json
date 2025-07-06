@@ -1,26 +1,25 @@
 {
-    "name": "@0918nobita/obsidian-zhongwen-block",
-    "version": "0.7.3",
-    "description": "An Obsidian plugin which provides code blocks with features for Chinese learners",
-    "license": "MIT",
-    "private": "true",
-    "type": "module",
-    "scripts": {
-        "build": "vite build",
-        "lint": "biome lint",
-        "format": "biome format --fix",
-        "format:check": "biome format"
-    },
-    "devDependencies": {
-        "@biomejs/biome": "1.9.4",
-        "@sveltejs/vite-plugin-svelte": "5.1.0",
-        "bun-types": "1.2.16",
-        "obsidian": "1.8.7",
-        "typescript": "5.8.3",
-        "vite": "6.3.5"
-    },
-    "dependencies": {
-        "pinyin-pro": "3.26.0",
-        "to-jyutping": "3.1.1"
-    }
+  "name": "@0918nobita/obsidian-zhongwen-block",
+  "version": "0.7.3",
+  "description": "An Obsidian plugin which provides code blocks with features for Chinese learners",
+  "license": "MIT",
+  "private": "true",
+  "type": "module",
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite build --watch",
+    "check": "bunx biome check ."
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.9.4",
+    "@sveltejs/vite-plugin-svelte": "5.1.0",
+    "bun-types": "1.2.16",
+    "obsidian": "1.8.7",
+    "typescript": "5.8.3",
+    "vite": "6.3.5"
+  },
+  "dependencies": {
+    "pinyin-pro": "3.26.0",
+    "to-jyutping": "3.1.1"
+  }
 }

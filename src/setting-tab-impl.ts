@@ -1,8 +1,8 @@
 import * as Obsidian from 'obsidian';
 
 import { type Lang, t } from './i18n';
-import type { SettingTab } from './setting-tab';
 import type { Plugin } from './plugin';
+import type { SettingTab } from './setting-tab';
 
 export class SettingTabImpl
     extends Obsidian.PluginSettingTab
