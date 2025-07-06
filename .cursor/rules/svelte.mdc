@@ -1,0 +1,12 @@
+---
+description: Svelte コンポーネントを記述するときのルール
+alwaysApply: false
+globs: ['**/*.svelte']
+---
+
+src/components ディレクトリ内に、以下のルールを守って設置する
+
+- ファイル名はアッパーキャメルケースにする
+- 依存関係によって階層構造を整える
+
+ファイルを編集した後には `bunx biome check [path]` を実行し、エラーが発生した場合は修正する

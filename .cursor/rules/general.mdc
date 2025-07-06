@@ -1,0 +1,11 @@
+---
+alwaysApply: true
+---
+
+## プロジェクトの概要
+
+Obsidian を活用した中国語の学習を支援するための、Obsidian プラグインです。
+
+## 基本的なコードフォーマット
+
+biome.json と .editorconfig を参照
