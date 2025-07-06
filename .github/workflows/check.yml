@@ -1,9 +1,9 @@
-name: Lint
+name: Check
 
 on:
   push:
     paths:
-      - '.github/workflows/lint.yml'
+      - '.github/workflows/check.yml'
       - 'src/**/*.svelte'
       - 'src/**/*.ts'
       - '.editorconfig'
@@ -14,10 +14,10 @@ on:
       - 'vite.config.ts'
 
 jobs:
-  lint:
+  check:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: oven-sh/setup-bun@v2
       - run: bun install
-      - run: bun run lint
+      - run: bun run check -- --verbose

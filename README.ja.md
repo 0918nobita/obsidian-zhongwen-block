@@ -67,16 +67,10 @@ $ bun i
 $ bun run build
 ```
 
-### Lint
+### Lint / コードフォーマットのチェック
 
 ```bash
-$ bun run lint
-```
-
-### ソースコードをフォーマットする
-
-```bash
-$ bun run format
+$ bun run check
 ```
 
 ### テスト

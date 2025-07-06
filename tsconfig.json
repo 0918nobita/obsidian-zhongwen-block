@@ -1,14 +1,14 @@
 {
-    "compilerOptions": {
-        "target": "es2018",
-        "module": "esnext",
-        "moduleResolution": "bundler",
-        "baseUrl": ".",
-        "noEmit": true,
-        "esModuleInterop": true,
-        "forceConsistentCasingInFileNames": true,
-        "strict": true,
-        "skipLibCheck": true,
-        "types": ["bun-types"]
-    }
+  "compilerOptions": {
+    "target": "es2018",
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "baseUrl": ".",
+    "noEmit": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "types": ["bun-types"]
+  }
 }

@@ -69,18 +69,11 @@ $ bun i
 $ bun run build
 ```
 
-### Lint
+### Lint/format check
 
 ```bash
-$ bun run lint
+$ npm run check
 ```
-
-### Format
-
-```bash
-$ bun run format
-```
-
 
 ### Test
 
