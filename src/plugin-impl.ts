@@ -1,11 +1,11 @@
 import * as Obsidian from 'obsidian';
 import { mount } from 'svelte';
 
-import PinyinCodeBlock from './pinyin-code-block.svelte';
-import JyutpingCodeBlock from './jyutping-code-block.svelte';
+import JyutpingCodeBlock from './components/JyutpingCodeBlock.svelte';
+import PinyinCodeBlock from './components/PinyinCodeBlock.svelte';
 import type { Plugin } from './plugin';
-import { type Settings, defaultSettings } from './settings';
 import { SettingTabImpl } from './setting-tab-impl';
+import { type Settings, defaultSettings } from './settings';
 
 export class PluginImpl extends Obsidian.Plugin implements Plugin {
     settings!: Settings;

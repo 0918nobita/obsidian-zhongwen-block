@@ -1,5 +1,5 @@
-import { describe, it, expect } from 'bun:test';
-import { getPinyin, getJyutping } from './get-romanization';
+import { describe, expect, it } from 'bun:test';
+import { getJyutping, getPinyin } from './get-romanization';
 
 describe('getPinyin', () => {
     it('should convert Chinese characters to pinyin', async () => {
