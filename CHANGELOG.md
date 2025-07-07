@@ -1,6 +1,24 @@
+## [0.8.0](https://github.com/0918nobita/obsidian-zhongwen-block/compare/0.7.3...0.8.0) (2025-07-07)
+
+### Features
+
+- Add support for Jyutping (Cantonese romanization)
+
+### Technical improvements
+
+- Major refactoring of Svelte components for better maintainability
+
+### Contributors
+
+- [@xpire](https://github.com/xpire) - Thank you for proposing and implementing Jyutping support!
+
 ## [0.7.3](https://github.com/0918nobita/obsidian-zhongwen-block/compare/0.7.2...0.7.3) (2025-04-29)
 
-- Fix display issue where long texts don't wrap at screen edges (Issue: [#100](https://github.com/0918nobita/obsidian-zhongwen-block/issues/100), huge thanks to [@fredricsanjaya](https://github.com/fredricsanjaya) for continuously helping improve this plugin!)
+- Fix display issue where long texts don't wrap at screen edges (Issue: [#100](https://github.com/0918nobita/obsidian-zhongwen-block/issues/100))
+
+### Contributors
+
+- [@fredricsanjaya](https://github.com/fredricsanjaya) - Thank you for continuously helping improve this plugin!
 
 ## [0.7.2](https://github.com/0918nobita/obsidian-zhongwen-block/compare/0.7.1...0.7.2) (2025-04-26)
 
@@ -8,7 +26,7 @@
 
 ### Bug fixes
 
-- Fix the line break rendering problem in code blocks (Issue: [#94](https://github.com/0918nobita/obsidian-zhongwen-block/issues/94), huge thanks to [@fredricsanjaya](https://github.com/fredricsanjaya) and [@dannephew](https://github.com/dannephew) for helping!)
+- Fix the line break rendering problem in code blocks (Issue: [#94](https://github.com/0918nobita/obsidian-zhongwen-block/issues/94))
 
 ### Update dependencies
 
@@ -18,6 +36,11 @@
 | pinyin-pro | 3.25.0 | 3.26.0 |
 | typescript | 5.5.4 | 5.8.3 |
 | vite | 5.4.8 | 6.3.3 |
+
+### Contributors
+
+- [@fredricsanjaya](https://github.com/fredricsanjaya) - Thank you for your continuous support and feedback!
+- [@dannephew](https://github.com/dannephew) - Thank you for helping with the bug fix!
 
 ## [0.7.1](https://github.com/0918nobita/obsidian-zhongwen-block/compare/0.7.0...0.7.1) (2024-10-05)
 
@@ -50,7 +73,7 @@
 
 ### Bug fixes
 
-- Fix the styles of code block processor to display line breaks as they are (PR: [#80](https://github.com/0918nobita/obsidian-zhongwen-block/issues/80)) (Issue: [#75](https://github.com/0918nobita/obsidian-zhongwen-block/issues/75)), huge thanks to [@orkunzozturk](https://github.com/orkunzozturk) for helping!
+- Fix the styles of code block processor to display line breaks as they are (PR: [#80](https://github.com/0918nobita/obsidian-zhongwen-block/issues/80)) (Issue: [#75](https://github.com/0918nobita/obsidian-zhongwen-block/issues/75))
 
 ### Update dependencies
 
@@ -58,6 +81,10 @@
 | ---------------------------- | ----- | ----- |
 | @vanilla-extract/vite-plugin | 4.0.4 | 4.0.6 |
 | vite                         | 5.1.4 | 5.1.5 |
+
+### Contributors
+
+- [@orkunzozturk](https://github.com/orkunzozturk) - Thank you for helping fix the code block processor styles!
 
 ## [0.6.0](https://github.com/0918nobita/obsidian-zhongwen-block/compare/0.5.1...0.6.0) (2024-03-04)
 
@@ -126,7 +153,11 @@
 
 ### Bug Fixes
 
-- Fix a display bug in Live Preview mode (PR: [#18](https://github.com/0918nobita/obsidian-zhongwen-block/pull/18)) (Issue: [#16](https://github.com/0918nobita/obsidian-zhongwen-block/issues/16)), huge thanks to [@mariomui](https://github.com/mariomui) for helping!
+- Fix a display bug in Live Preview mode (PR: [#18](https://github.com/0918nobita/obsidian-zhongwen-block/pull/18)) (Issue: [#16](https://github.com/0918nobita/obsidian-zhongwen-block/issues/16))
+
+### Contributors
+
+- [@mariomui](https://github.com/mariomui) - Thank you for helping fix the display bug in Live Preview mode!
 
 ## [0.3.0](https://github.com/0918nobita/obsidian-zhongwen-block/compare/0.2.0...0.3.0) (2023-11-13)
 
