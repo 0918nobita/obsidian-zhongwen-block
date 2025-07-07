@@ -1,6 +1,6 @@
 {
   "name": "@0918nobita/obsidian-zhongwen-block",
-  "version": "0.7.3",
+  "version": "0.8.0",
   "description": "An Obsidian plugin which provides code blocks with features for Chinese learners",
   "license": "MIT",
   "private": "true",
