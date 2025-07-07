@@ -5,7 +5,7 @@ import JyutpingCodeBlock from './components/JyutpingCodeBlock.svelte';
 import PinyinCodeBlock from './components/PinyinCodeBlock.svelte';
 import type { Plugin } from './plugin';
 import { SettingTabImpl } from './setting-tab-impl';
-import { type Settings, defaultSettings } from './settings';
+import { defaultSettings, type Settings } from './settings';
 
 export class PluginImpl extends Obsidian.Plugin implements Plugin {
     settings!: Settings;
