@@ -42,6 +42,7 @@ $effect(() => {
         font-family: 'Noto Sans SC', sans-serif;
     }
 
+    /* ライブプレビューを利用しているときのみ適用するスタイル */
     :global(.cm-preview-code-block) div {
         margin-top: 0.5rem;
     }
