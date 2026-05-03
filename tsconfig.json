@@ -1,14 +1,11 @@
 {
   "compilerOptions": {
-    "target": "es2018",
+    "target": "es2022",
     "module": "esnext",
     "moduleResolution": "bundler",
-    "baseUrl": ".",
     "noEmit": true,
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "strict": true,
     "skipLibCheck": true,
-    "types": ["bun-types"]
+    "verbatimModuleSyntax": true,
+    "erasableSyntaxOnly": true
   }
 }

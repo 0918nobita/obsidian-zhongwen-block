@@ -55,26 +55,32 @@
 
 ## 開発
 
-## 依存パッケージのインストール
+### Node.js, pnpm のインストール
 
 ```bash
-$ bun i
+$ mise install
+```
+
+### 依存パッケージのインストール
+
+```bash
+$ pnpm install
 ```
 
 ### ビルド
 
 ```bash
-$ bun run build
+$ pnpm run build
 ```
 
 ### Lint / コードフォーマットのチェック
 
 ```bash
-$ bun run check
+$ pnpm run check
 ```
 
 ### テスト
 
 ```bash
-$ bun test
+$ pnpm run test
 ```

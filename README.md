@@ -57,26 +57,32 @@ When `true`, each pinyin will be displayed from the beginning.
 
 ## Development
 
+### Install Node.js & pnpm
+
+```bash
+$ mise install
+```
+
 ### Install dependencies
 
 ```bash
-$ bun i
+$ pnpm install
 ```
 
 ### Build
 
 ```bash
-$ bun run build
+$ pnpm run build
 ```
 
 ### Lint/format check
 
 ```bash
-$ npm run check
+$ pnpm run check
 ```
 
 ### Test
 
 ```bash
-$ bun test
+$ pnpm run test
 ```

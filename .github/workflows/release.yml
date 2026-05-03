@@ -7,13 +7,26 @@ on:
 
 jobs:
   release:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-slim
     steps:
-      - uses: actions/checkout@v4
-      - uses: oven-sh/setup-bun@v2
-      - run: bun install
-      - run: bun run build
-      - uses: ncipollo/release-action@v1
+      - name: Checkout repo
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+      - name: Install Node.js & pnpm
+        uses: jdx/mise-action@1648a7812b9aeae629881980618f079932869151 # v4.0.1
+      - name: Get pnpm store directory
+        run: echo "STORE_PATH=$(pnpm store path --silent)" >> "$GITHUB_ENV"
+      - name: Cache pnpm store
+        uses: actions/cache@27d5ce7f107fe9357f9df03efb73ab90386fccae # v5.0.5
+        with:
+          path: ${{ env.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+      - name: Build Obsidian plugin with Vite
+        run: pnpm run build
+      - uses: ncipollo/release-action@339a81892b84b4eeb0f6e744e4574d79d0d9b8dd # v1.21.0
         with:
           artifacts: 'dist/main.js,dist/styles.css,manifest.json'
           body: |
