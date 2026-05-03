@@ -1,3 +1,21 @@
+export interface ZhSegment {
+    type: 'zh';
+    zhChars: string;
+}
+
+export interface NonZhSegment {
+    type: 'nonZh';
+    nonZhChars: string;
+}
+
+export type Segment = ZhSegment | NonZhSegment;
+
+export function splitIntoSegmentsPerLine(sentence: string): Segment[][] {
+    const lines = splitCharsIntoLines(Array.from(sentence));
+
+    return lines.map(splitLineIntoSegments);
+}
+
 type Line = string[];
 
 function splitCharsIntoLines(chars: string[]): Line[] {
@@ -34,23 +52,6 @@ function splitCharsIntoLines(chars: string[]): Line[] {
     return lines;
 }
 
-export interface ZhSegment {
-    type: 'zh';
-    zhChars: string;
-}
-
-export interface NonZhSegment {
-    type: 'nonZh';
-    nonZhChars: string;
-}
-
-export type Segment = ZhSegment | NonZhSegment;
-
-function isZh(c: string): boolean {
-    const charCode = c.charCodeAt(0);
-    return 19968 <= charCode && charCode <= 40869;
-}
-
 function splitLineIntoSegments(line: Line): Segment[] {
     const result: Segment[] = [];
     let currentSegment: Segment | null = null;
@@ -79,8 +80,7 @@ function splitLineIntoSegments(line: Line): Segment[] {
     return result;
 }
 
-export function splitIntoSegmentsPerLine(sentence: string): Segment[][] {
-    const lines = splitCharsIntoLines(Array.from(sentence));
-
-    return lines.map(splitLineIntoSegments);
+function isZh(c: string): boolean {
+    const charCode = c.charCodeAt(0);
+    return 19968 <= charCode && charCode <= 40869;
 }
