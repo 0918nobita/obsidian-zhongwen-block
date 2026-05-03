@@ -8,14 +8,14 @@ import { SettingTabImpl } from './setting-tab-impl';
 import { defaultSettings, type Settings } from './settings';
 
 export class PluginImpl extends Obsidian.Plugin implements Plugin {
-    settings!: Settings;
+    settings = defaultSettings;
 
     async onload() {
-        this.settings = Object.assign(
-            {},
-            defaultSettings,
-            (await this.loadData()) as Settings,
-        );
+        const loadedSettings: Settings = await this.loadData();
+        this.settings = {
+            ...this.settings,
+            ...loadedSettings,
+        };
 
         this.addSettingTab(new SettingTabImpl(this.app, this));
 
